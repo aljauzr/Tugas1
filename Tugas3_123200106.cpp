@@ -10,8 +10,10 @@ float nilaiakhir;
 cout << "Login Akun" << endl;
 cout << "-----------------" << endl;
 cout << "Masukkan Username: "; cin >> user;
-cout << "Masukkan Password: "; cin >> pass;
-if (user == "admin" && pass == "123"){
+
+if (user == "admin"){
+    cout << "Masukkan Password: "; cin >> pass;
+    if (pass == "123"){
     cout << "--------------------" << endl;
     cout << "Anda berhasil login." << endl;
     cout << " " << endl;
@@ -53,18 +55,25 @@ if (user == "admin" && pass == "123"){
               cout << "-----------------------------------------------------------------------" << endl;
               cout << "Anda tidak lulus mata kuliah Kalkulus dengan nilai " << fixed << setprecision(2) << nilaiakhir;
           break;
+
+        default:
+          cout << "Input anda salah!" << endl;
         }
     }
-}
-else if(user != "admin"){
-   cout << "Username anda salah!" << endl;
-}
-else if(pass != "123"){
-  cout << "Password anda salah!" << endl;
-}
-else{
-   cout << "---------------------------------" << endl;
-    cout << "Username dan Password anda salah!" << endl;
+    }else{
+        cout << "-----------------------------" << endl;
+        cout << "Password anda salah!" << endl;
+    }
+}else if (user != "admin"){
+    cout << "Masukkan Password: "; cin >> pass;
+    if (pass == "123"){
+cout << "-------------------------" << endl;
+cout << "Username anda salah!" << endl;
+
+    }else {
+        cout << "---------------------------------------" << endl;
+        cout << "Username dan password anda salah!" << endl;
+    }
 }
 }
 
